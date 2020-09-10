@@ -10,6 +10,7 @@ const infoRouter = require('./servers/router/info');          // "통계 정보"
 const supportRouter = require('./servers/router/support');    // "고객 지원" 상단 버튼
 const boardRouter = require('./servers/router/board');        // "게시판" 상단 버튼
 const addBoardRouter = require('./servers/router/addBoard');  // "게시판 글 작성"
+const dataCheckRouter = require('./servers/router/dataCheck');
 
 const app = express();
 const config = require('./config.json')[app.get('env')];
@@ -29,6 +30,7 @@ app.use('/info', infoRouter);
 app.use('/support', supportRouter);
 app.use('/board', boardRouter);                                 // 게시판 사용
 app.use('/addBoard', addBoardRouter);                           // 글 작성 사용
+app.use('/dataCheck', dataCheckRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

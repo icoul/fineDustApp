@@ -15,7 +15,7 @@ router.get('/', (req, res, next) => {
                         nums: data.nums,
                         title: data.title,
                         views: data.views,
-                        date: moment(data.date).format('MM/DD HH:i'),
+                        date: moment(data.date).format('YYYY.MM.DD HH:mm'),
                         autor: data.autor
                     }
                 })

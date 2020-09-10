@@ -26,6 +26,7 @@ table.type09 tbody th {
 table.type09 td {
     width: 350px;
     padding: 10px;
+    text-align:center;
     vertical-align: top;
     border-bottom: 1px solid #ccc;
 }

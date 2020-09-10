@@ -22,11 +22,14 @@ block content
             each map in boardDatas
                 tr
                     td #{map.nums}
-                    td #{map.title}
-                    td #{map.views}
-                    td #{map.date}
+                    td(style="text-align:left")
+                        a(href="#" onclick="goToAddBoard()")= map.title
                     td #{map.autor}
-    div(align="right" style="margin-right:10%;")
+                    td #{map.date}
+                    td #{map.views}
 
+
+    div(align="right" style="margin-right:10%;")
+        //a(class="btn btn-primary pull-right") 글쓰기
         button.btn.btn-primary(onClick='goToAddBoard()') 글 쓰기
 
